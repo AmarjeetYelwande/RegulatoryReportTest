@@ -7,6 +7,12 @@ import string
 import pytest
 
 COLUMN_NAME_TO_COMPARE = "Column Code"
+COLUMN_NAME_WITH_TYPE = "Type"
+
+df = pd.DataFrame({'float': [1.00],
+                   'int': [1],
+                   'datetime': [pd.Timestamp('20180310')],
+                   'string': ['foo']})
 
 # Template file product owned composes as part of specification.
 # When you upload them make sure to add their name in data file.
@@ -38,10 +44,13 @@ def test_compare_columns(template_file,file_to_be_compared_with_template,are_col
     # Need to insert another column as report file does not have headers.
     # Pandas is not able to read file correctly when there is no header column.
     # Tried various techniques but failed. So using this workaround which works
-    column_names = np.random.choice(list(string.ascii_lowercase), size=len(first_data_frame.columns) + 1)
+    column_names = np.random.choice(list(string.ascii_lowercase), size=len(first_data_frame.columns) + 1, replace=False)
     second_data_frame = pd.read_csv(second_file(file_to_be_compared_with_template), names=column_names, header=None)
-    first_column = first_data_frame[COLUMN_NAME_TO_COMPARE].to_numpy()
+    first_column_template = first_data_frame[COLUMN_NAME_TO_COMPARE].to_numpy()
+    second_column_template = first_data_frame[COLUMN_NAME_WITH_TYPE].to_numpy()
+    print(first_column_template)
+    print(second_column_template)
     # Even though it is index 0 it actually reads values in second column.
     # First column is headers inserted manually by test for workaround implemented
-    second_column = second_data_frame.iloc[0].to_numpy()
-    assert np.array_equal(first_column, second_column) == are_columns_equal
+    second_column_report = second_data_frame.iloc[0].to_numpy()
+    assert np.array_equal(first_column_template, second_column_report) == are_columns_equal
