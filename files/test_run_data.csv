@@ -1,0 +1,5 @@
+template_file,file_to_be_compared_with_template,are_columns_equal
+y_01.01.csv,y_01.01.happy_path.csv,True
+y_01.01.csv,y_01.01.wrong_column_name.csv,False
+y_01.01.csv,y_01.01.number_of_columns_not_equal.csv,False
+y_01.01.csv,y_01.01.column_reported_twice.csv,True
