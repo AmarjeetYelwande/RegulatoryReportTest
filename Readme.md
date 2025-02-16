@@ -8,7 +8,8 @@ python3 -m venv .pytest // create virtual environment
 py -m pip install -r requirements.txt // installed required packages to run tests
 pytest // run tests
 ```
-# For strategy used to satisfy below requirements please refer to strategy.doc in evidence folder.
+
+# For strategy used to satisfy below requirements please refer to strategy.md in evidence folder.
 
 # Below are requirements received from product team
 
