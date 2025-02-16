@@ -1,3 +1,18 @@
+# How to Setup this project on your Windows machine
+
+Issue following commands from the command prompt
+```choco install python // only if you have not python installed on your machine
+https://github.com/AmarjeetYelwande/RegulatoryReportTest.git // get this project
+python3 -m venv .pytest // create virtual environment
+.pytest\Scripts\activate.bat  // activate virtual environment. If using powershell replace activate.bat with activate.ps1
+py -m pip install -r requirements.txt // installed required packages to run tests
+pytest // run tests
+```
+
+# For strategy used to satisfy below requirements please refer to strategy.md in evidence folder.
+
+# Below are requirements received from product team
+
 # Background
 
 You have been approached by an SME within a Regulatory team which are already underway with their project.
