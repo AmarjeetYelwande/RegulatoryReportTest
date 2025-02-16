@@ -1,7 +1,7 @@
 Column Code,Column Name,Type,Fill-in Option,Drop down reference
-c0010,Entity's official name.,Alphanumerical,Mandatory,
-c0020,Reporting date.,Alphanumerical,Mandatory,
+c0010,Entity's official name.,Alphanumeric,Mandatory,
+c0020,Reporting date.,Date,Mandatory,
 c0030,Submission date of the report.,Country,Mandatory,LISTOPTION1
-c0040,Primary contractual agreement reference number.,Closed set of options,Mandatory,
-c0050,Submission date of the report.,Alphanumerical,Mandatory,
-c0060,The entity's type or nature.,Date,Mandatory,
+c0040,Primary contractual agreement reference number.,ClosedSetOfOptions,Mandatory,
+c0050,Submission date of the report.,Lei,Mandatory,
+c0060,The entity's type or nature.,BinaryOptions,Mandatory,

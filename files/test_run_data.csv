@@ -1,5 +1,9 @@
-template_file,file_to_be_compared_with_template,are_columns_equal
-y_01.01.csv,y_01.01.happy_path.csv,True
-y_01.01.csv,y_01.01.wrong_column_name.csv,False
-y_01.01.csv,y_01.01.number_of_columns_not_equal.csv,False
-y_01.01.csv,y_01.01.column_reported_twice.csv,True
+template_file,report_file_to_be_compared_with_template,expected_outcome_column_test,expected_outcome_types_test
+y_01.01.csv,y_01.01.happy_path.csv,True,True
+y_01.01.csv,y_01.01.column_reported_twice.csv,False,True
+y_01.01.csv,y_01.01.number_of_columns_not_equal.csv,False,True
+y_01.01.csv,y_01.01.wrong_column_name.csv,False,True
+y_01.01.csv,y_01.01.wrong_data_types.csv,True,False
+
+
+
